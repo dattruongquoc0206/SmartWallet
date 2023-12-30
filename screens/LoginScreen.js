@@ -72,7 +72,12 @@ const LoginScreen = ({ navigation }) => {
       {!loading ? (
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
           <StatusBar style="light" />
-          <Image source={require('./../assets/logo.png')} style={{width: 200, height: 200, marginBottom: 20}} />
+          <View style={{ bottom:240}}>          
+           <Image source={require('./../assets/logo.png')} style={{width: 600, height: 600}} />
+</View>
+<View style={{bottom:380}}>
+
+
           <View style={styles.inputContainer}>
             {/* <Input
               type='email'
@@ -106,6 +111,7 @@ const LoginScreen = ({ navigation }) => {
               onSubmitEditing={signIn}
             />
           </View>
+
           {/* <Button
             loading={submitLoading}
             containerStyle={styles.buttonLogin}
@@ -138,11 +144,12 @@ const LoginScreen = ({ navigation }) => {
             type="outline"
           /> */}
           <View style={{ height: 50 }}></View>
+          </View>
         </KeyboardAvoidingView>
       ) : (
         <View style={styles.container}>
           <StatusBar style="light" />
-          <Image source={require('./../assets/logo.png')} style={{width: 200, height: 200, marginBottom: 20}} />
+          <Image source={require('./../assets/logo.png')} style={{width: 400, height: 400, marginBottom: 20}} />
           <Text h4>Loading...</Text>
         </View>
       )}
