@@ -257,6 +257,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        bottom:40
       },
       filterContainer: {
         backgroundColor: '#fff',

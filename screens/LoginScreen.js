@@ -10,6 +10,8 @@ import { Input, Button, Image, Text } from "react-native-elements";
 import { StatusBar } from "expo-status-bar";
 import { auth } from "../firebase";
 import * as firebase from 'firebase/app';
+
+
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -59,7 +61,7 @@ const LoginScreen = ({ navigation }) => {
   }, [navigation, loading]);
 
   const ForgotPassword = () => {
-    firebase.auth().sendPasswordResetEmail(email)
+    auth.sendPasswordResetEmail(email)
       .then(() => {
         alert('Password reset email sent')
       }).catch((error) => {

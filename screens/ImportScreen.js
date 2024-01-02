@@ -60,6 +60,7 @@ const ImportScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Import Transactions</Text>
+      <Text>File CSV contains collumns: description, amount, date, type, formatDate, category</Text>
       <TouchableOpacity style={styles.selectButton} onPress={selectFile}>
         <Text style={styles.selectButtonText}>Select File</Text>
       </TouchableOpacity>

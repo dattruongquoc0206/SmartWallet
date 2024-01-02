@@ -1,6 +1,24 @@
 import { Dimensions } from "react-native";
-const { width, height } = Dimensions.get("window");
+import { useEffect } from 'react';
 
+const { width, height } = Dimensions.get("window");
+import * as Font from 'expo-font';
+export const useFonts = () => {
+    useEffect(() => {
+      const loadFont = async () => {
+        await Font.loadAsync({
+          'Roboto-Bold': require('../assets/fonts/Roboto-Bold.ttf'),
+          'Roboto-Black': require('../assets/fonts/Roboto-Black.ttf'),
+          'Roboto-Regular': require('../assets/fonts/Roboto-Regular.ttf'),
+          'Roboto-Bold': require('../assets/fonts/Roboto-Bold.ttf'),
+        });
+      };
+    
+      loadFont();
+    }, []);
+  };
+
+  
 export const COLORS = {
     // base colors
     primary: "#194868", // Dark Blue

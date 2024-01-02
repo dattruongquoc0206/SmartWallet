@@ -271,7 +271,7 @@ export default function Profile({ navigation }) {
         <Text h4 style={{ color: "#4A2D5D" }}>
           <Ionicons name="md-wallet-outline" size={30} color="#00A86B" />
         </Text>
-        <Text> {totalBalance}</Text>
+        <Text>   {totalBalance}</Text>
       </View>
       <View style={{ margin: 20 }}>
         <TouchableOpacity

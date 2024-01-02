@@ -38,6 +38,8 @@ const ExportScreen = () => {
       const fileUri = FileSystem.cacheDirectory + fileName;
       await FileSystem.writeAsStringAsync(fileUri, csvData);
       await Sharing.shareAsync(fileUri, { mimeType: `text/${fileFormat}` });
+      Alert.alert('Export Successful');
+
     } catch (error) {
       Alert.alert('Export Failed', error.message);
     }
@@ -54,7 +56,7 @@ const ExportScreen = () => {
         >
           <Text style={styles.formatButtonText}>CSV</Text>
         </TouchableOpacity>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={[styles.formatButton, fileFormat === 'qif' && styles.formatButtonSelected]}
           onPress={() => setFileFormat('qif')}
         >
@@ -65,7 +67,7 @@ const ExportScreen = () => {
           onPress={() => setFileFormat('xml')}
         >
           <Text style={styles.formatButtonText}>XML</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       <TouchableOpacity style={styles.exportButton} onPress={exportData}>
         <Text style={styles.exportButtonText}>Export</Text>

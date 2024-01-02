@@ -121,8 +121,9 @@ const RegisterScreen = ({ navigation }) => {
     <KeyboardAvoidingView behavior='padding' style={styles.container}>
       <StatusBar style='light' />
       
-       <Image source={require('./../assets/logo.png')} style={{width: 200, height: 200, marginBottom: 20}} />
-      <Text h4 style={{ marginBottom: 50 }}>
+       <Image source={require('./../assets/logo.png')} style={{width: 300, height: 300, marginTop: 20, marginBottom:15}} />
+      <View style={{bottom:120}}>
+      <Text h4 style={{ top:20,marginBottom: 20 }}>
         Create an account
       </Text>
       <View style={styles.inputContainer}>
@@ -180,6 +181,8 @@ const RegisterScreen = ({ navigation }) => {
         type='clear'
         style={styles.button}
       />
+      </View>
+      
     </KeyboardAvoidingView>
   )
 }

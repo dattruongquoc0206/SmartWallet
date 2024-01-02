@@ -20,10 +20,10 @@ import { Ellipse, Svg } from "react-native-svg";
 // import * as Svg from 'react-native-svg';
 import { COLORS, FONTS, SIZES, icons, images } from "../constants";
 import { set } from "date-fns";
-
+import { useFonts } from '../constants//theme';
 const ChartScreen = () => { 
   // dummy data
-  
+  useFonts();
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
     const unsubscribe = db
@@ -551,11 +551,22 @@ const ChartScreen = () => {
 
     return (
       <View style={{ padding: SIZES.padding }}>
-        <FlatList
+        {/* <FlatList
           data={data}
           renderItem={renderItem}
           keyExtractor={(item) => `${item.id}`}
-        />
+        /> */}
+        <ScrollView>
+  {data.map(item => {
+    
+    const element = renderItem({ item });
+
+    return React.cloneElement(element, { key: item.id });
+  })}
+</ScrollView>
+
+
+
       </View>
     );
   }

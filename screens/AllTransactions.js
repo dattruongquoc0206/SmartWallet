@@ -119,7 +119,7 @@ export default AllTransactions;
 const styles = StyleSheet.create({
 
   Container:{
-    backgroundColor:'red'
+    backgroundColor:'white'
   },
   container: {
     backgroundColor: 'white',
